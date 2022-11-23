@@ -23,7 +23,7 @@
         <Grid Grid.Row="2">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                 <Button Width="300" Height="80" Margin="0 0 50 0" x:Name="btLimpar" FontSize="32" Click="btLimpar_Click">Limpar</Button>
-                <Button Width="300" Height="80" x:Name="btCadastrar" FontSize="32">Cadastrar</Button>
+                <Button Width="300" Height="80" x:Name="btCadastrar" FontSize="32" Click="btCadastrar_Click" >Cadastrar</Button>
             </StackPanel>
         </Grid>
 
@@ -42,7 +42,7 @@
                 <Label HorizontalAlignment="Center" FontSize="30">RG</Label>
                 <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtRG" HorizontalContentAlignment="Center"></TextBox>
                 <Label HorizontalAlignment="Center" FontSize="30">Data de Nascimento</Label>
-                <DatePicker FontSize="24" x:Name="dpData" HorizontalContentAlignment="Center"></DatePicker>
+                <DatePicker FontSize="24" x:Name="dpData" HorizontalContentAlignment="Center" ></DatePicker>
 
             </StackPanel>
 

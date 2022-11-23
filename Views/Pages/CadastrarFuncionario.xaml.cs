@@ -42,13 +42,26 @@ namespace sislocacao.Views.Pages
         private void btCadastrar_Click(object sender, RoutedEventArgs e)
         {
             _func.CPF = txtCPF.Text;
-            _func.DataNasc = Convert.ToString(dpData.SelectedDate.Value);
+            _func.DataNasc = dpData.SelectedDate.Value;
             _func.Nome = txtNome.Text;
             _func.RG = txtRG.Text;
             _func.Celular = txtCelular.Text;
             _func.Endereco = txtEndereco.Text;
             _func.Funcao = txtFuncao.Text;
             _func.Salario = Convert.ToDouble(txtSalario.Text);
+
+            try
+            {
+                var dao = new FuncionarioDAO();
+                dao.Insert(_func);
+                MessageBox.Show("Funcionario cadastrado no sistema!");
+            }
+            catch (Exception ex) { 
+            
+                MessageBox.Show(ex.Message);
+            }
         }
+
+
     }
 }
