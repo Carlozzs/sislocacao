@@ -112,6 +112,7 @@
     <Compile Include="Models\ClienteDAO.cs" />
     <Compile Include="Models\Funcionario.cs" />
     <Compile Include="Models\FuncionarioDAO.cs" />
+    <Compile Include="Models\Retirada.cs" />
     <Compile Include="Views\Pages\CadastrarCarro.xaml.cs">
       <DependentUpon>CadastrarCarro.xaml</DependentUpon>
     </Compile>

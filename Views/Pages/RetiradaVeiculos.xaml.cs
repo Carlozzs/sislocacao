@@ -24,5 +24,10 @@ namespace sislocacao.Views.Pages
         {
             InitializeComponent();
         }
+
+        private void btCadastrar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

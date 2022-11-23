@@ -80,11 +80,11 @@ create table Retirada(
 id_ret int  not null primary key auto_increment,
 data_ret date,
 hora_ret time,
-id_fun_fk int ,
-foreign key (id_fun_fk) references Funcionario (id_fun),
- id_cli_fk int ,
+id_func_fk int ,
+foreign key (id_func_fk) references Funcionario (id_func),
+id_cli_fk int ,
 foreign key (id_cli_fk) references Cliente(id_cli),
- id_car_fk int ,
+id_car_fk int ,
 foreign key (id_car_fk) references Carro(id_car),
 km_ret int
 );
@@ -112,22 +112,20 @@ foreign key (id_ret_fk) references Retirada (id_ret),
 foreign key (id_car_fk) references Carro(id_car)
 );
 
-
 create table Caixa(
 id_cai int  not null primary key auto_increment,
-numero_cai varchar(100),
 data_cai varchar(100),
-saldo_inicial_cai  varchar(100),
-saldo_final_cai varchar(100),
-total_recebimentos_cai int,
-total_retirados_cai varchar(100) ,
- id_fun_fk int ,
-foreign key (id_fun_fk) references Funcionario(id_fun),
- id_cli_fk int ,
+valorpag_cai varchar(100),
+id_pag_fk int,
+foreign key (ip_pag_fk) references TipoPagamento(id_pag),
+id_func_fk int,
+foreign key (id_func_fk) references Funcionario(id_func),
+id_cli_fk int,
 foreign key (id_cli_fk) references Cliente(id_cli),
-id_dev_fk int ,
+id_dev_fk int,
 foreign key (id_dev_fk) references Devolucao (id_dev)
 );
+
 
 
 
