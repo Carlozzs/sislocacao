@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using sislocacao.Models;
 
 namespace sislocacao.Views.Pages
 {
@@ -20,9 +21,40 @@ namespace sislocacao.Views.Pages
     /// </summary>
     public partial class CadastrarCarro : Page
     {
+        private Carro car = new Carro();
         public CadastrarCarro()
         {
             InitializeComponent();
+        }
+
+        private void btCadastrar_Click(object sender, RoutedEventArgs e)
+        {
+            car.Placa = txtPlaca.Text;
+            car.Porta = txtPortas.Text;
+            car.Status = "Disponível";
+            car.Marca = txtMarca.Text;
+            car.Modelo = txtModelo.Text;
+            car.Cor = txtCor.Text;
+
+            try
+            {
+                var dao = new CarroDAO();
+                dao.Insert(car);
+                MessageBox.Show("Carro cadastrado com sucesso");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btLimpar_Click(object sender, RoutedEventArgs e)
+        {
+            txtCor.Clear();
+            txtMarca.Clear();
+            txtModelo.Clear();
+            txtPlaca.Clear();
+            txtPortas.Clear();
         }
     }
 }
