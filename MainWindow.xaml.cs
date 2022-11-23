@@ -42,5 +42,10 @@ namespace sislocacao
             Paginas.Content = new CadastrarFuncionario();
 
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

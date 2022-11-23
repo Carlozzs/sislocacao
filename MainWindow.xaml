@@ -9,32 +9,32 @@
         Title="MainWindow" Height="1080" Width="1280">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="150"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0" Background="#BD2A2E">
+        <Grid Grid.Row="0" Background="#FF0E1A28">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="200"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
             <Grid Grid.Column="0">
-                <Image Source="/imagens/locacar.png"></Image>
+                <Image Margin="50 0 0 0" Source="/locacar.png" Stretch="UniformToFill"/>
             </Grid>
             <Grid Grid.Column="1">
                 <StackPanel Orientation="Horizontal">
-                    <Menu Margin="50 30 50 20">
-                        <MenuItem Background="#a22a2e" FontSize="25" Header="Cadastro" >
-                            <MenuItem Margin="5 5 5 5" Header="Carro" Click="MenuItemCarro_Click"/>
-                            <MenuItem Margin="5 5 5 5" Header="Cliente" Click="MenuItemCliente_Click"/>
-                            <MenuItem Margin="5 5 5 5" Header="Funcionário" Click="MenuItemFuncionario_Click" />
+                    <Menu Margin="50" VerticalAlignment="Center">
+                        <MenuItem Background="#FF416692" FontSize="25" Header="Cadastro" Click="MenuItem_Click" Foreground="#DDFFFFFF" >
+                            <MenuItem Margin="5 5 5 5" Foreground="#DDFFFFFF" Header="Carro" Click="MenuItemCarro_Click"/>
+                            <MenuItem Margin="5 5 5 5" Foreground="#DDFFFFFF" Header="Cliente" Click="MenuItemCliente_Click"/>
+                            <MenuItem Margin="5 5 5 5" Foreground="#DDFFFFFF" Header="Funcionário" Click="MenuItemFuncionario_Click" />
                         </MenuItem>
                     </Menu>
                 </StackPanel>
             </Grid>
         </Grid>
-        <Grid Grid.Row="1" Background="White">
+        <Grid Grid.Row="1" Background="#FF99A5B3">
             <StackPanel>
                 <Frame x:Name="Paginas" NavigationUIVisibility="Hidden"/>
             </StackPanel>
