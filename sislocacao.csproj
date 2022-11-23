@@ -108,6 +108,7 @@
     </ApplicationDefinition>
     <Compile Include="DataBase\conexao.cs" />
     <Compile Include="Models\Funcionario.cs" />
+    <Compile Include="Models\FuncionarioDAO.cs" />
     <Compile Include="Views\Pages\CadastrarCarro.xaml.cs">
       <DependentUpon>CadastrarCarro.xaml</DependentUpon>
     </Compile>
@@ -184,7 +185,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Helpers\" />
     <Folder Include="Imagens\" />
     <Folder Include="UserControls\" />
   </ItemGroup>
