@@ -108,6 +108,8 @@
     </ApplicationDefinition>
     <Compile Include="DataBase\conexao.cs" />
     <Compile Include="Helpers\DAOHelper.cs" />
+    <Compile Include="Models\Carro.cs" />
+    <Compile Include="Models\CarroDAO.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\ClienteDAO.cs" />
     <Compile Include="Models\Funcionario.cs" />

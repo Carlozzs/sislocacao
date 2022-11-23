@@ -21,23 +21,23 @@
 
         <Grid Grid.Row="2">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <Button Width="300" Height="80" Margin="0 0 50 0" x:Name="btLimpar" FontSize="32">Limpar</Button>
-                <Button Width="300" Height="80" x:Name="btCadastrar" FontSize="32">Cadastrar</Button>
+                <Button Width="300" Height="80" Margin="0 0 50 0" x:Name="btLimpar" FontSize="32" Click="btLimpar_Click">Limpar</Button>
+                <Button Width="300" Height="80" x:Name="btCadastrar" FontSize="32" Click="btCadastrar_Click">Cadastrar</Button>
             </StackPanel>
         </Grid>
 
         <Grid Grid.Row="1">
             <StackPanel Margin="100 50" VerticalAlignment="Center" HorizontalAlignment="Center" Width="1000">
                 <Label HorizontalAlignment="Center" FontSize="30">Marca</Label>
-                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtMarca"></TextBox>
+                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtMarca" HorizontalContentAlignment="Center"></TextBox>
                 <Label HorizontalAlignment="Center" FontSize="30" >Modelo</Label>
-                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtModelo" ></TextBox>
+                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtModelo" HorizontalContentAlignment="Center" ></TextBox>
                 <Label HorizontalAlignment="Center" FontSize="30">Placa</Label>
-                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtPlaca"></TextBox>
+                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtPlaca" HorizontalContentAlignment="Center"></TextBox>
                 <Label HorizontalAlignment="Center" FontSize="30">Portas</Label>
-                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtPortas"></TextBox>
+                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtPortas" HorizontalContentAlignment="Center"></TextBox>
                 <Label HorizontalAlignment="Center" FontSize="30" >Cor</Label>
-                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtCor"></TextBox>
+                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtCor" HorizontalContentAlignment="Center"></TextBox>
             </StackPanel>
             
         </Grid>
