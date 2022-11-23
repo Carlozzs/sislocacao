@@ -11,6 +11,7 @@ namespace sislocacao.Models
         public string Nome { get; set; }
 
         public DateTime? dataHora { get; set; }
+        public string dataHora2 { get; set; }
         public int id_func_fk { get; set; }
         public int id_cli_fk { get; set; }
         public int id_car_fk { get; set; }

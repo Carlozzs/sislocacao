@@ -110,6 +110,31 @@ namespace sislocacao.Models
                 throw ex;
             }
         }
-   
+
+        public int PegarId(string nome)
+        {
+            var comando = _conn.Query();
+
+            int Id = 0;
+
+            comando.CommandText = "select id_cli from Cliente where (nome_cli = @nome);";
+
+            comando.Parameters.AddWithValue("@nome", nome);
+
+            MySqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                var Cliente = new Cliente();
+                Cliente.Id = reader.GetInt32("id_cli");
+
+                Id = Cliente.Id;
+
+            }
+
+            reader.Close();
+
+            return Id;
+        }
+
     }
 }

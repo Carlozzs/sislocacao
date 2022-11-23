@@ -17,13 +17,12 @@ namespace sislocacao.Models
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "insert into Retirada values (null, @dataHora, @funcFk, @cliFk, @carFk, @kmRodado);";
+                comando.CommandText = "insert into Retirada values (null, @dataHora, @funcFk, @cliFk, @carFk);";
 
-                comando.Parameters.AddWithValue("@dataHora", retirada.dataHora) ;
+                comando.Parameters.AddWithValue("@dataHora", retirada.dataHora2) ;
                 comando.Parameters.AddWithValue("@funcFk", retirada.id_func_fk);
                 comando.Parameters.AddWithValue("@cliFk", retirada.id_cli_fk);
                 comando.Parameters.AddWithValue("@carFk", retirada.id_car_fk);
-                comando.Parameters.AddWithValue("@kmRodado", retirada.KmRodados);
 
                 var resultado = comando.ExecuteNonQuery();
 

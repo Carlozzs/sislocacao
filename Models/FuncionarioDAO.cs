@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using MySql.Data.MySqlClient;
 using sislocacao.bancodados;
 using sislocacao.Helpers;
@@ -79,6 +80,31 @@ namespace sislocacao.Models
             {
                 throw ex;
             }
+        }
+
+        public int PegarId(string nome)
+        {
+            var comando = _conn.Query();
+
+            int Id = 0;
+
+            comando.CommandText = "select id_func from Funcionario where (nome_func = @nome);";
+
+            comando.Parameters.AddWithValue("@nome", nome);
+
+            MySqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                var Funcionario = new Funcionario();
+                Funcionario.Id = reader.GetInt32("id_func");
+
+                Id = Funcionario.Id;
+
+            }
+
+            reader.Close();
+
+            return Id;
         }
     }
 

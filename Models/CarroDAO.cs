@@ -79,5 +79,30 @@ namespace sislocacao.Models
                 throw ex;
             }
         }
+
+        public int PegarId(string nome)
+        {
+            var comando = _conn.Query();
+
+            int Id = 0;
+
+            comando.CommandText = "select id_car from Carro where (modelo_car = @nome);";
+
+            comando.Parameters.AddWithValue("@nome", nome);
+
+            MySqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                var Carro = new Carro();
+                Carro.Id = reader.GetInt32("id_car");
+
+                Id = Carro.Id;
+
+            }
+
+            reader.Close();
+
+            return Id;
+        }
     }
 }

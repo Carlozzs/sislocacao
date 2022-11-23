@@ -86,8 +86,9 @@ id_cli_fk int ,
 foreign key (id_cli_fk) references Cliente(id_cli),
 id_car_fk int ,
 foreign key (id_car_fk) references Carro(id_car),
-km_ret int
 );
+
+insert into Retirada values (null, "0000-00-00 00:00:00", 1, 1, 1, 5);
 
 
 create table TipoPagamento(
