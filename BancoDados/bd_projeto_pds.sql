@@ -1,5 +1,6 @@
 
 drop database if exists Projeto_Pds;
+create database projeto_pds;
 use Projeto_Pds;
 
 create table Funcionario (
@@ -78,8 +79,7 @@ insert into carro values (null, 'Cruze LTZ 1.8', 'branco', '4 portas', 'nra 2233
 
 create table Retirada(
 id_ret int  not null primary key auto_increment,
-data_ret date,
-hora_ret time,
+dataHora datetime,
 id_func_fk int ,
 foreign key (id_func_fk) references Funcionario (id_func),
 id_cli_fk int ,
@@ -117,7 +117,7 @@ id_cai int  not null primary key auto_increment,
 data_cai varchar(100),
 valorpag_cai varchar(100),
 id_pag_fk int,
-foreign key (ip_pag_fk) references TipoPagamento(id_pag),
+foreign key (id_pag_fk) references TipoPagamento(id_pag),
 id_func_fk int,
 foreign key (id_func_fk) references Funcionario(id_func),
 id_cli_fk int,
