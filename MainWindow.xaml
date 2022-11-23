@@ -13,17 +13,27 @@
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0" Background="#BD2A2E">
-            <StackPanel Orientation="Horizontal">
-                <Menu Margin="50 30 50 20">
-                    <MenuItem Background="#a22a2e" FontSize="25" Header="Cadastro">
-                        <MenuItem Margin="5 5 5 5" Header="Carro"/>
-                        <MenuItem Margin="5 5 5 5" Header="Cliente" Click="MenuItemCliente_Click"/>
-                        <MenuItem Margin="5 5 5 5" Header="Funcionário"/>
-                    </MenuItem>
-                </Menu>
-            </StackPanel>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <Image Source="/imagens/locacar.png"></Image>
+            </Grid>
+            <Grid Grid.Column="1">
+                <StackPanel Orientation="Horizontal">
+                    <Menu Margin="50 30 50 20">
+                        <MenuItem Background="#a22a2e" FontSize="25" Header="Cadastro">
+                            <MenuItem Margin="5 5 5 5" Header="Carro"/>
+                            <MenuItem Margin="5 5 5 5" Header="Cliente" Click="MenuItemCliente_Click"/>
+                            <MenuItem Margin="5 5 5 5" Header="Funcionário"/>
+                        </MenuItem>
+                    </Menu>
+                </StackPanel>
+            </Grid>
         </Grid>
-        <Grid Grid.Row="1" Background="#3B3936">
+        <Grid Grid.Row="1" Background="White">
             <StackPanel>
                 <Frame x:Name="Paginas" NavigationUIVisibility="Hidden"/>
             </StackPanel>
