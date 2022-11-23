@@ -116,6 +116,12 @@
     <Compile Include="Views\Pages\CadastrarFuncionario.xaml.cs">
       <DependentUpon>CadastrarFuncionario.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Pages\DevolucaoVeiculo.xaml.cs">
+      <DependentUpon>DevolucaoVeiculo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\RetiradaVeiculos.xaml.cs">
+      <DependentUpon>RetiradaVeiculos.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -137,6 +143,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Pages\CadastrarFuncionario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Pages\DevolucaoVeiculo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Pages\RetiradaVeiculos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

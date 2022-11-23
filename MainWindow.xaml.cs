@@ -47,5 +47,10 @@ namespace sislocacao
         {
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Paginas.Content = new RetiradaVeiculos();
+        }
     }
 }
