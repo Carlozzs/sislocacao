@@ -37,14 +37,14 @@
             <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="800">
 
                 <Label HorizontalAlignment="Center" FontSize="30">Nome</Label>
-                <TextBox FontSize="24" Margin="0 0 0 10" ></TextBox>
+                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtNome"></TextBox>
                 <Label HorizontalAlignment="Center" FontSize="30">CPF</Label>
-                <TextBox FontSize="24" Margin="0 0 0 10" ></TextBox>
+                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtCPF"></TextBox>
                 <Label HorizontalAlignment="Center" FontSize="30">RG</Label>
-                <TextBox FontSize="24" Margin="0 0 0 10" ></TextBox>
+                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtRG"></TextBox>
                 <Label HorizontalAlignment="Center" FontSize="30">Data de Nascimento</Label>
-                <TextBox FontSize="24" Margin="0 0 0 10" ></TextBox>
-                
+                <!-- <TextBox FontSize="24" Margin="0 0 0 10" ></TextBox> -->
+                <DatePickerTextBox FontSize="24" HorizontalAlignment="Center" Text=""></DatePickerTextBox>
 
             </StackPanel>
 

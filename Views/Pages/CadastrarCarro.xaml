@@ -29,15 +29,15 @@
         <Grid Grid.Row="1">
             <StackPanel Margin="100 50" VerticalAlignment="Center" HorizontalAlignment="Center" Width="1000">
                 <Label HorizontalAlignment="Center" FontSize="30">Marca</Label>
-                <TextBox FontSize="24" Margin="0 0 0 10" ></TextBox>
-                <Label HorizontalAlignment="Center" FontSize="30">Modelo</Label>
-                <TextBox FontSize="24" Margin="0 0 0 10" ></TextBox>
+                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtMarca"></TextBox>
+                <Label HorizontalAlignment="Center" FontSize="30" >Modelo</Label>
+                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtModelo" ></TextBox>
                 <Label HorizontalAlignment="Center" FontSize="30">Placa</Label>
-                <TextBox FontSize="24" Margin="0 0 0 10" ></TextBox>
+                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtPlaca"></TextBox>
                 <Label HorizontalAlignment="Center" FontSize="30">Portas</Label>
-                <TextBox FontSize="24" Margin="0 0 0 10" ></TextBox>
-                <Label HorizontalAlignment="Center" FontSize="30">Cor</Label>
-                <TextBox FontSize="24" Margin="0 0 0 10" ></TextBox>
+                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtPortas"></TextBox>
+                <Label HorizontalAlignment="Center" FontSize="30" >Cor</Label>
+                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtCor"></TextBox>
             </StackPanel>
             
         </Grid>

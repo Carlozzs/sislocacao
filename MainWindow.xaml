@@ -25,8 +25,8 @@
             <Grid Grid.Column="1">
                 <StackPanel Orientation="Horizontal">
                     <Menu Margin="50 30 50 20">
-                        <MenuItem Background="#a22a2e" FontSize="25" Header="Cadastro" Click="MenuItemCarro_Click">
-                            <MenuItem Margin="5 5 5 5" Header="Carro" />
+                        <MenuItem Background="#a22a2e" FontSize="25" Header="Cadastro" >
+                            <MenuItem Margin="5 5 5 5" Header="Carro" Click="MenuItemCarro_Click"/>
                             <MenuItem Margin="5 5 5 5" Header="Cliente" Click="MenuItemCliente_Click"/>
                             <MenuItem Margin="5 5 5 5" Header="Funcionário" Click="MenuItemFuncionario_Click" />
                         </MenuItem>
