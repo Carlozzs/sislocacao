@@ -22,7 +22,7 @@
 
         <Grid Grid.Row="2">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <Button Width="300" Height="80" Margin="0 0 50 0" x:Name="btLimpar" FontSize="32">Limpar</Button>
+                <Button Width="300" Height="80" Margin="0 0 50 0" x:Name="btLimpar" FontSize="32" Click="btLimpar_Click">Limpar</Button>
                 <Button Width="300" Height="80" x:Name="btCadastrar" FontSize="32">Cadastrar</Button>
             </StackPanel>
         </Grid>
@@ -36,25 +36,25 @@
             <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="800">
 
                 <Label HorizontalAlignment="Center" FontSize="30">Nome</Label>
-                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtNome"></TextBox>
+                <TextBox FontSize="24" HorizontalContentAlignment="Center" Margin="0 0 0 10" x:Name="txtNome"></TextBox>
                 <Label HorizontalAlignment="Center" FontSize="30">CPF</Label>
-                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtCPF"></TextBox>
+                <TextBox FontSize="24" HorizontalContentAlignment="Center" Margin="0 0 0 10" x:Name="txtCPF"></TextBox>
                 <Label HorizontalAlignment="Center" FontSize="30">RG</Label>
-                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtRG"></TextBox>
+                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtRG" HorizontalContentAlignment="Center"></TextBox>
                 <Label HorizontalAlignment="Center" FontSize="30">Data de Nascimento</Label>
-                <DatePicker FontSize="24" x:Name="txtData" HorizontalContentAlignment="Center"></DatePicker>
+                <DatePicker FontSize="24" x:Name="dpData" HorizontalContentAlignment="Center"></DatePicker>
 
             </StackPanel>
 
             <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="800">
                 <Label HorizontalAlignment="Center" FontSize="30" >Enderço</Label>
-                <TextBox FontSize="24" Margin="0 0 0 10" ></TextBox>
+                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtEndereco" HorizontalContentAlignment="Center"></TextBox>
                 <Label HorizontalAlignment="Center" FontSize="30">Celular</Label>
-                <TextBox FontSize="24" Margin="0 0 0 10" ></TextBox>
+                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtCelular" HorizontalContentAlignment="Center"></TextBox>
                 <Label HorizontalAlignment="Center" FontSize="30">Função</Label>
-                <TextBox FontSize="24" Margin="0 0 0 10" ></TextBox>    
+                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtFuncao" HorizontalContentAlignment="Center"></TextBox>    
                 <Label HorizontalAlignment="Center" FontSize="30">Sálario</Label>
-                <TextBox FontSize="24" Margin="0 0 0 10" ></TextBox>
+                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtSalario" HorizontalContentAlignment="Center"></TextBox>
 
             </StackPanel>
 

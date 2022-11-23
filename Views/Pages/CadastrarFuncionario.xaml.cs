@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using sislocacao.Models;
 
 namespace sislocacao.Views.Pages
 {
@@ -20,9 +21,34 @@ namespace sislocacao.Views.Pages
     /// </summary>
     public partial class CadastrarFuncionario : Page
     {
+        private Funcionario _func = new Funcionario();
         public CadastrarFuncionario()
         {
             InitializeComponent();
+        }
+
+        private void btLimpar_Click(object sender, RoutedEventArgs e)
+        {
+            txtCPF.Clear();
+            dpData.SelectedDate = null;
+            txtNome.Clear();
+            txtRG.Clear();
+            txtCelular.Clear();
+            txtEndereco.Clear();
+            txtFuncao.Clear();
+            txtSalario.Clear();
+        }
+
+        private void btCadastrar_Click(object sender, RoutedEventArgs e)
+        {
+            _func.CPF = txtCPF.Text;
+            _func.DataNasc = Convert.ToString(dpData.SelectedDate.Value);
+            _func.Nome = txtNome.Text;
+            _func.RG = txtRG.Text;
+            _func.Celular = txtCelular.Text;
+            _func.Endereco = txtEndereco.Text;
+            _func.Funcao = txtFuncao.Text;
+            _func.Salario = Convert.ToDouble(txtSalario.Text);
         }
     }
 }

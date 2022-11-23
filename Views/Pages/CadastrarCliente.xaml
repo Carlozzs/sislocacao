@@ -43,7 +43,7 @@
 
             <StackPanel Grid.Row="1" Grid.Column="1" Margin="100 50" VerticalAlignment="Center" HorizontalAlignment="Center" Width="1000">
                 <Label HorizontalAlignment="Center" FontSize="30">Data de Nascimento</Label>
-                <DatePicker FontSize="24" x:Name="txtData" HorizontalContentAlignment="Center"></DatePicker>
+                <DatePicker FontSize="24" x:Name="dpData" HorizontalContentAlignment="Center"></DatePicker>
                 <Label HorizontalAlignment="Center" FontSize="30" >Estado Civil</Label>
                 <ComboBox x:Name="cbEstadoCivil" HorizontalContentAlignment="Center" FontSize="24" >
                     <ComboBoxItem>Solteiro(a)</ComboBoxItem>

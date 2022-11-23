@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
 
-namespace wpf_sallonnovo.bancodados
+namespace sislocacao.bancodados
 {
     internal class conexao
     {
