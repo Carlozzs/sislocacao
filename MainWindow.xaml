@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:sislocacao"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1280">
+        WindowState="Maximized"
+        Title="MainWindow" Height="1080" Width="1280">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
@@ -24,10 +25,10 @@
             <Grid Grid.Column="1">
                 <StackPanel Orientation="Horizontal">
                     <Menu Margin="50 30 50 20">
-                        <MenuItem Background="#a22a2e" FontSize="25" Header="Cadastro">
-                            <MenuItem Margin="5 5 5 5" Header="Carro"/>
+                        <MenuItem Background="#a22a2e" FontSize="25" Header="Cadastro" Click="MenuItemCarro_Click">
+                            <MenuItem Margin="5 5 5 5" Header="Carro" />
                             <MenuItem Margin="5 5 5 5" Header="Cliente" Click="MenuItemCliente_Click"/>
-                            <MenuItem Margin="5 5 5 5" Header="Funcionário"/>
+                            <MenuItem Margin="5 5 5 5" Header="Funcionário" Click="MenuItemFuncionario_Click" />
                         </MenuItem>
                     </Menu>
                 </StackPanel>

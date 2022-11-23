@@ -30,5 +30,16 @@ namespace sislocacao
         {
             Paginas.Content = new CadastrarCliente();
         }
+        
+
+        private void MenuItemCarro_Click(object sender, RoutedEventArgs e)
+        {
+            Paginas.Content = new CadastrarCarro();
+        }
+
+        private void MenuItemFuncionario_Click(object sender, RoutedEventArgs e)
+        {
+            Paginas.Content = new CadastrarFuncionario();
+        }
     }
 }

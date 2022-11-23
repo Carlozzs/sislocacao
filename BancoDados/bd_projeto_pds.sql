@@ -9,7 +9,7 @@ cpf_func varchar (20) not null,
 rg_func varchar (20),
 data_nascimento_func date,
 salario_func double not null,
-telefone_func varchar (50),
+endereco_func varchar (300),
 celular_func varchar (50) not null,
 funcao_func varchar (50) not null
 );
