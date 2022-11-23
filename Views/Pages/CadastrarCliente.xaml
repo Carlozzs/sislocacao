@@ -34,18 +34,19 @@
             
             <StackPanel Margin="100 50" VerticalAlignment="Center" HorizontalAlignment="Center" Width="1000">
                 <Label HorizontalAlignment="Center" FontSize="30">Nome</Label>
-                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtNome"></TextBox>
+                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtNome" HorizontalContentAlignment="Center"></TextBox>
                 <Label HorizontalAlignment="Center" FontSize="30" >CPF</Label>
-                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtCPF" ></TextBox>
+                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtCPF" HorizontalContentAlignment="Center"></TextBox>
                 <Label HorizontalAlignment="Center" FontSize="30">RG</Label>
-                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtRG"></TextBox>
+                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtRG" HorizontalContentAlignment="Center"></TextBox>
             </StackPanel>
 
             <StackPanel Grid.Row="1" Grid.Column="1" Margin="100 50" VerticalAlignment="Center" HorizontalAlignment="Center" Width="1000">
                 <Label HorizontalAlignment="Center" FontSize="30">Data de Nascimento</Label>
-                <DatePicker FontSize="24" x:Name="datePicker" HorizontalContentAlignment="Center"></DatePicker>
+                <DatePicker FontSize="24" x:Name="dpData" HorizontalContentAlignment="Center" Width="750"></DatePicker>
+
                 <Label HorizontalAlignment="Center" FontSize="30" >Estado Civil</Label>
-                <ComboBox x:Name="cbEstadoCivil" HorizontalContentAlignment="Center" FontSize="24" >
+                <ComboBox x:Name="cbEstadoCivil" HorizontalContentAlignment="Center" FontSize="24"  >
                     <ComboBoxItem>Solteiro(a)</ComboBoxItem>
                     <ComboBoxItem>Casado(a)</ComboBoxItem>
                     <ComboBoxItem>Separado(a)</ComboBoxItem>
@@ -53,7 +54,7 @@
                     <ComboBoxItem>Viúvo(a)</ComboBoxItem>
                 </ComboBox>
                 <Label HorizontalAlignment="Center" FontSize="30">Telefone</Label>
-                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtTelefone"></TextBox>
+                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtTelefone" HorizontalContentAlignment="Center"></TextBox>
             </StackPanel>
         </Grid>
 

@@ -29,11 +29,12 @@ namespace sislocacao.Views.Pages
 
         private void btCadastrar_Click(object sender, RoutedEventArgs e)
         {
+
             _cli.Nome = txtNome.Text;
             _cli.RG = txtRG.Text;
             _cli.Telefone = txtTelefone.Text;
             _cli.EstadoCivil = cbEstadoCivil.Text;
-            _cli.DataNascimento = datePicker.SelectedDate;
+            _cli.DataNascimento = dpData.SelectedDate.Value;
             _cli.CPF = txtCPF.Text;
 
             var dao = new ClienteDAO();
@@ -48,6 +49,7 @@ namespace sislocacao.Views.Pages
             {
                 MessageBox.Show(ex.Message);
             }
+
         }
     }
 }
