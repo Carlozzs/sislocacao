@@ -42,8 +42,7 @@
                 <Label HorizontalAlignment="Center" FontSize="30">RG</Label>
                 <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtRG"></TextBox>
                 <Label HorizontalAlignment="Center" FontSize="30">Data de Nascimento</Label>
-                <!-- <TextBox FontSize="24" Margin="0 0 0 10" ></TextBox> -->
-                <DatePicker FontSize="24" x:Name="txtData"></DatePicker>
+                <DatePicker FontSize="24" x:Name="txtData" HorizontalContentAlignment="Center"></DatePicker>
 
             </StackPanel>
 
