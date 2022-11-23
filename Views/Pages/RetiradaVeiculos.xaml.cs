@@ -71,8 +71,6 @@ namespace sislocacao.Views.Pages
             _retirada.id_car_fk = dao.PegarId(cbCarro.SelectedItem.ToString());
             _retirada.id_cli_fk = dao3.PegarId(cbCliente.SelectedItem.ToString());
 
-            MessageBox.Show(dao2.PegarId(cbFuncionario.SelectedItem.ToString()).ToString());
-
             try
             {
                 dao4.Insert(_retirada);
