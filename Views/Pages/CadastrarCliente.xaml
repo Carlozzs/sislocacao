@@ -22,7 +22,7 @@
         <Grid Grid.Row="2">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                 <Button Width="300" Height="80" Margin="0 0 50 0" x:Name="btLimpar" FontSize="32">Limpar</Button>
-                <Button Width="300" Height="80" x:Name="btCadastrar" FontSize="32">Cadastrar</Button>
+                <Button Width="300" Height="80" x:Name="btCadastrar" FontSize="32" Click="btCadastrar_Click">Cadastrar</Button>
             </StackPanel>
         </Grid>
 
@@ -43,7 +43,7 @@
 
             <StackPanel Grid.Row="1" Grid.Column="1" Margin="100 50" VerticalAlignment="Center" HorizontalAlignment="Center" Width="1000">
                 <Label HorizontalAlignment="Center" FontSize="30">Data de Nascimento</Label>
-                <DatePicker FontSize="24" x:Name="dpData" HorizontalContentAlignment="Center"></DatePicker>
+                <DatePicker FontSize="24" x:Name="datePicker" HorizontalContentAlignment="Center"></DatePicker>
                 <Label HorizontalAlignment="Center" FontSize="30" >Estado Civil</Label>
                 <ComboBox x:Name="cbEstadoCivil" HorizontalContentAlignment="Center" FontSize="24" >
                     <ComboBoxItem>Solteiro(a)</ComboBoxItem>

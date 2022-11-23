@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using sislocacao.Models;
 
 namespace sislocacao.Views.Pages
 {
@@ -20,9 +21,33 @@ namespace sislocacao.Views.Pages
     /// </summary>
     public partial class CadastrarCliente : Page
     {
+        private Cliente _cli = new Cliente();
         public CadastrarCliente()
         {
             InitializeComponent();
+        }
+
+        private void btCadastrar_Click(object sender, RoutedEventArgs e)
+        {
+            _cli.Nome = txtNome.Text;
+            _cli.RG = txtRG.Text;
+            _cli.Telefone = txtTelefone.Text;
+            _cli.EstadoCivil = cbEstadoCivil.Text;
+            _cli.DataNascimento = datePicker.SelectedDate;
+            _cli.CPF = txtCPF.Text;
+
+            var dao = new ClienteDAO();
+
+            try
+            {
+                dao.Insert(_cli);
+                MessageBox.Show("Cliente registrado com sucesso");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
