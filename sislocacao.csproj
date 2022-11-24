@@ -112,6 +112,8 @@
     <Compile Include="Models\CarroDAO.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\ClienteDAO.cs" />
+    <Compile Include="Models\Devolucao.cs" />
+    <Compile Include="Models\DevolucaoDAO.cs" />
     <Compile Include="Models\Funcionario.cs" />
     <Compile Include="Models\FuncionarioDAO.cs" />
     <Compile Include="Models\Retirada.cs" />

@@ -33,7 +33,7 @@
                 <Label HorizontalAlignment="Center" FontSize="30">Data</Label>
                 <DatePicker  Name="LocaleDatePicker" RenderTransformOrigin="1,1" BorderBrush="Black" SelectedDateFormat="Short"   />
                 <Label HorizontalAlignment="Center" FontSize="30" >Hora</Label>
-                <materialDesign:TimePicker  Is24Hours="True" Margin="0 0 0 20" RenderTransformOrigin="1,1" BorderBrush="Black" Name="TimePicker" WithSeconds="True"   />
+                <materialDesign:TimePicker  Is24Hours="True" Margin="0 0 0 20" RenderTransformOrigin="1,1" BorderBrush="Black" Name="timePicker" WithSeconds="True"   />
                 <Label HorizontalAlignment="Center" FontSize="30">Funcionario</Label>
                 <ComboBox FontSize="24" Margin="0 0 0 10" x:Name="cbFuncionario"></ComboBox>
                 <Label HorizontalAlignment="Center" FontSize="30">Cliente</Label>

@@ -66,7 +66,7 @@ namespace sislocacao.Views.Pages
 
 
 
-            _retirada.dataHora2 = LocaleDatePicker.SelectedDate.Value.ToString("yyyy-MM-dd") + " " + TimePicker.Text;
+            _retirada.dataHora2 = LocaleDatePicker.SelectedDate.Value.ToString("yyyy-MM-dd") + " " + timePicker.Text;
             _retirada.id_func_fk = dao2.PegarId(cbFuncionario.SelectedItem.ToString());
             _retirada.id_car_fk = dao.PegarId(cbCarro.SelectedItem.ToString());
             _retirada.id_cli_fk = dao3.PegarId(cbCliente.SelectedItem.ToString());

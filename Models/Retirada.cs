@@ -9,7 +9,7 @@ namespace sislocacao.Models
     public class Retirada
     {
         public string Nome { get; set; }
-
+        public int Id { get; set; }
         public DateTime? dataHora { get; set; }
         public string dataHora2 { get; set; }
         public int id_func_fk { get; set; }
