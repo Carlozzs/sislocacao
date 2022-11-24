@@ -43,33 +43,6 @@ namespace sislocacao.Views
             }
         }
 
-        private void Button_Atualizar_Click(object sender, RoutedEventArgs e)
-        {
-            var caixaSelect = dataGridCaixa.SelectedItem as Caixa;
-
-            var resultado = MessageBox.Show($"Deseja realmente atualizar o registro '{caixaSelect.Id}' ?", "Confirmação de alteração",
-                MessageBoxButton.YesNo, MessageBoxImage.Warning);
-
-            try
-            {
-                if (resultado == MessageBoxResult.Yes)
-                {
-
-                    var dao = new CaixaDAO();
-                    dao.Update(caixaSelect);
-
-                    MessageBox.Show("Atualizado com sucesso!");
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-            CarregarListagem();
-        }
-
         private void Button_Remover_Click(object sender, RoutedEventArgs e)
         {
             var caixaSelect = dataGridCaixa.SelectedItem as Caixa;

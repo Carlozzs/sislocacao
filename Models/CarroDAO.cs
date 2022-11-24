@@ -272,7 +272,7 @@ namespace sislocacao.Models
                 comando.Parameters.AddWithValue("@portas", carro.Porta);
                 comando.Parameters.AddWithValue("@placa", carro.Placa);
                 comando.Parameters.AddWithValue("@marca", carro.Marca);
-                comando.Parameters.AddWithValue("@c", carro.Status);
+                comando.Parameters.AddWithValue("@status", carro.Status);
 
                 var resultado = comando.ExecuteNonQuery();
 
