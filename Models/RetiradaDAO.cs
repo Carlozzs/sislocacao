@@ -58,7 +58,7 @@ namespace sislocacao.Models
                     var Retirada = new Retirada();
                     Retirada.Id = reader.GetInt32("id_ret");
                     Retirada.id_func_fk = reader.GetInt32("id_func_fk");
-                    Retirada.dataHora2 = DAOHelper.GetString(reader, "dataHora_ret");
+                    Retirada.dataHora = DAOHelper.GetDateTime(reader, "dataHora");
                     Retirada.id_cli_fk = reader.GetInt32("id_cli_fk");
                     Retirada.id_car_fk = reader.GetInt32("id_car_fk");
                     

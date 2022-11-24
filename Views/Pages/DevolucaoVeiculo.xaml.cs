@@ -60,7 +60,7 @@ namespace sislocacao.Views.Pages
                 var listaret = dao.list();
                 foreach (var retiradas in listaret)
                 {
-                    cbRetirada.Items.Add(new { Data = retiradas.dataHora2, Value = retiradas.Id });
+                    cbRetirada.Items.Add(new { Data = retiradas.dataHora, Value = retiradas.Id });
                 }
 
             }
@@ -73,18 +73,20 @@ namespace sislocacao.Views.Pages
 
         private void btLimpar_Click(object sender, RoutedEventArgs e)
         {
-            
+
         }
 
-        private void btCadastrar_Click(object sender, RoutedEventArgs e)
+        private void btCadastrar_Click_1(object sender, RoutedEventArgs e)
         {
-            dev.FkCar = int.Parse(cbCarro.SelectedValue.ToString());
-            dev.FkRetirada = int.Parse(cbRetirada.SelectedValue.ToString());
+            //dev.FkCar = int.Parse(cbCarro.SelectedValue.ToString());
+           // dev.FkRetirada = int.Parse(cbRetirada.SelectedValue.ToString());
             dev.Data = LocaleDatePicker.SelectedDate;
             dev.Hora = timePicker.SelectedTime;
-            dev.KmRodados = int.Parse(txtKmRodados.Text);
-
-
+            // dev.KmRodados = int.Parse(txtKmRodados.Text);
+            string data = Convert.ToDateTime(dev.Data).ToString("d");
+            string hora = Convert.ToDateTime(dev.Hora).ToString("T");
+            MessageBox.Show(data + " " + hora);
+            /*
             try
             {
                 var dao = new DevolucaoDAO();
@@ -95,7 +97,7 @@ namespace sislocacao.Views.Pages
             {
 
                 MessageBox.Show(ex.Message);
-            }
+            }*/
         }
     }
 }

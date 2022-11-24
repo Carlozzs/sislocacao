@@ -25,7 +25,7 @@
         <Grid Grid.Row="2"> 
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                 <Button Width="300" Height="80" Margin="0 0 50 0" x:Name="btLimpar" FontSize="32" Click="btLimpar_Click">Limpar</Button>
-                <Button Width="350" Height="80" x:Name="btCadastrar" FontSize="32">Cadastrar devolução</Button>
+                <Button Width="350" Height="80" x:Name="btCadastrar" FontSize="32" Click="btCadastrar_Click_1">Cadastrar devolução</Button>
             </StackPanel>
         </Grid>
 
