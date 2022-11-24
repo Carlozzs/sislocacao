@@ -69,8 +69,9 @@ namespace sislocacao.Views
 
             if (resultado == MessageBoxResult.Yes)
             {
-
-
+                var form = new UpdateCarro(carroSelect);
+                form.ShowDialog();
+                CarregarListagem();
             }
 
             CarregarListagem();
