@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using sislocacao.bancodados;
+using MySql.Data.MySqlClient;
+using sislocacao.Helpers;
 
 namespace sislocacao.Models
 {
@@ -40,5 +42,93 @@ namespace sislocacao.Models
             }
             
         }
+        public int IdCli(Devolucao dev)
+        {
+            try
+            {
+                var id = 0;
+
+                var comando = _conn.Query();
+
+                comando.CommandText = "Select id_cli_fk as idClI from Retirada where (id_ret = @id);";
+
+                comando.Parameters.AddWithValue("@id", dev.FkRetirada);
+                MySqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    id = reader.GetInt32("idCli");
+                }
+                reader.Close();
+                
+                return id;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            
+            
+
+        }
+        public int IdFunc(Devolucao dev)
+        {
+            try
+            {
+                var id = 0;
+
+                var comando = _conn.Query();
+
+                comando.CommandText = "Select id_func_fk as idFunc from Retirada where (id_ret = @id);";
+
+                comando.Parameters.AddWithValue("@id", dev.FkRetirada);
+                MySqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    id = reader.GetInt32("idFunc");
+                }
+                reader.Close();
+
+                return id;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+
+
+        }
+        public int IdDev()
+        {
+            try
+            {
+                var id = 0;
+
+                var comando = _conn.Query();
+
+                comando.CommandText = "Select max(id_dev) as idDev from Devolucao;";
+
+                MySqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    id = reader.GetInt32("idDev");
+                }
+                reader.Close();
+
+                return id;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+
+
+        }
     }
+   
+    
 }

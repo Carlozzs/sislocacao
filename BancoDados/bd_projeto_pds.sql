@@ -114,7 +114,6 @@ foreign key (id_car_fk) references Carro(id_car)
 create table Caixa(
 id_cai int  not null primary key auto_increment,
 data_cai varchar(100),
-valorpag_cai varchar(100),
 id_pag_fk int,
 foreign key (id_pag_fk) references TipoPagamento(id_pag),
 id_func_fk int,

@@ -90,8 +90,6 @@ namespace sislocacao.Views.Pages
             dev.DataS = Convert.ToDateTime(dev.Data).ToString("yyyy-MM-dd");
             dev.HoraS = Convert.ToDateTime(dev.Hora).ToString("T");
             
-            MessageBox.Show(Convert.ToString(dev.FkRetirada));
-            
             try
             {
                 var dao = new DevolucaoDAO();
@@ -107,6 +105,9 @@ namespace sislocacao.Views.Pages
 
                 MessageBox.Show(ex.Message);
             }
+
+            var tela = new CadastrarCaixa(dev);
+            tela.ShowDialog();  
         }
     }
 }

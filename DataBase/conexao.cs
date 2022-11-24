@@ -16,7 +16,7 @@ namespace sislocacao.bancodados
 
         private static string user = "root";
 
-        private static string password = "root";
+        private static string password = "Q5so8$n%Ga";
 
         private static string dbname = "Projeto_Pds";
 
