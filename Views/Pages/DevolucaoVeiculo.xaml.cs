@@ -37,22 +37,7 @@ namespace sislocacao.Views.Pages
 
             cbRetirada.DisplayMemberPath = "Data";
             cbRetirada.SelectedValuePath = "Value";
-            try
-            {
-                var daocar = new CarroDAO();
-                var listacar = daocar.List();
-                foreach (var carrinho in listacar)
-                {
-
-                    cbCarro.Items.Add(new { Modelo = carrinho.Modelo, Value = carrinho.Id });
-                    
-                }
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
+            
 
             try
             {
@@ -60,7 +45,25 @@ namespace sislocacao.Views.Pages
                 var listaret = dao.list();
                 foreach (var retiradas in listaret)
                 {
-                    cbRetirada.Items.Add(new { Data = retiradas.dataHora, Value = retiradas.Id });
+                    retiradas.dataHora2 = Convert.ToDateTime(retiradas.dataHora).ToString("G");
+                    cbRetirada.Items.Add(new { Data = retiradas.dataHora2, Value = retiradas.Id });
+                    var a = retiradas.id_car_fk;
+                    try
+                    {
+                        var daocar = new CarroDAO();
+                        var listacar = daocar.ListIn();
+                        foreach (var carrinho in listacar)
+                        {
+                            carrinho.Modelo = daocar.buscaModelo(retiradas);
+                            cbCarro.Items.Add(new { Modelo = carrinho.Modelo, Value = a });
+
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message);
+                    }
                 }
 
             }
@@ -78,26 +81,32 @@ namespace sislocacao.Views.Pages
 
         private void btCadastrar_Click_1(object sender, RoutedEventArgs e)
         {
-            //dev.FkCar = int.Parse(cbCarro.SelectedValue.ToString());
-           // dev.FkRetirada = int.Parse(cbRetirada.SelectedValue.ToString());
+            dev.FkCar = int.Parse(cbCarro.SelectedValue.ToString());
+            dev.FkRetirada = int.Parse(cbRetirada.SelectedValue.ToString());
+
             dev.Data = LocaleDatePicker.SelectedDate;
             dev.Hora = timePicker.SelectedTime;
-            // dev.KmRodados = int.Parse(txtKmRodados.Text);
-            string data = Convert.ToDateTime(dev.Data).ToString("d");
-            string hora = Convert.ToDateTime(dev.Hora).ToString("T");
-            MessageBox.Show(data + " " + hora);
-            /*
+            dev.KmRodados = int.Parse(txtKmRodados.Text);
+            dev.DataS = Convert.ToDateTime(dev.Data).ToString("yyyy-MM-dd");
+            dev.HoraS = Convert.ToDateTime(dev.Hora).ToString("T");
+            
+            MessageBox.Show(Convert.ToString(dev.FkRetirada));
+            
             try
             {
                 var dao = new DevolucaoDAO();
                 dao.Insert(dev);
                 MessageBox.Show("Devolução Realizada!");
+                var dao1 = new CarroDAO();
+                dao1.UpdateDis(dev);
+                //var dao2 = new RetiradaDAO();
+                //dao2.Delete(dev);
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.Message);
-            }*/
+            }
         }
     }
 }

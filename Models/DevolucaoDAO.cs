@@ -19,8 +19,8 @@ namespace sislocacao.Models
 
                 comando.CommandText = "Insert into Devolucao values (null, @data, @hora, @km, @fkret, @fkcar)";
 
-                comando.Parameters.AddWithValue("@data", devolucao.Data);
-                comando.Parameters.AddWithValue("@hora", devolucao.Hora);
+                comando.Parameters.AddWithValue("@data", devolucao.DataS);
+                comando.Parameters.AddWithValue("@hora", devolucao.HoraS);
                 comando.Parameters.AddWithValue("@km", devolucao.KmRodados);
                 comando.Parameters.AddWithValue("@fkret", devolucao.FkRetirada);
                 comando.Parameters.AddWithValue("@fkcar", devolucao.FkCar);

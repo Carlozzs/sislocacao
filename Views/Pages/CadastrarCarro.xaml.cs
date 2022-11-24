@@ -31,7 +31,7 @@ namespace sislocacao.Views.Pages
         {
             car.Placa = txtPlaca.Text;
             car.Porta = txtPortas.Text;
-            car.Status = "Disponível";
+            car.Status = "disponivel";
             car.Marca = txtMarca.Text;
             car.Modelo = txtModelo.Text;
             car.Cor = txtCor.Text;

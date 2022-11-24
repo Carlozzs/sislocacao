@@ -33,7 +33,7 @@
                     </Menu>
                     <Button Background="#FF416692" FontSize="25" Height="50" BorderBrush="{x:Null}" Foreground="#DDFFFFFF" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click">Retirada de veículos
                     </Button>
-                    <Button Margin="50" Background="#FF416692" FontSize="25" Height="50" BorderBrush="{x:Null}" Foreground="#DDFFFFFF" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click">Devolução de veículos
+                    <Button Margin="50" Background="#FF416692" FontSize="25" Height="50" BorderBrush="{x:Null}" Foreground="#DDFFFFFF" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ButtonDevolucao_Click">Devolução de veículos
                     </Button>
                 </StackPanel>
             </Grid>

@@ -15,6 +15,8 @@ namespace sislocacao.Models
         public int KmRodados { get; set; }
         public int FkRetirada { get; set; }
         public int FkCar { get; set; }
+        public string DataS { get; set; }
+        public string HoraS { get; set; }
 
     }
 }

@@ -73,6 +73,30 @@ namespace sislocacao.Models
                 throw ex;
             }
         }
+        public void Delete(Devolucao devolucao)
+        {
+            try
+            {
+                var comando = _conn.Query();
+
+                comando.CommandText= "delete from Retirada where (id_ret = @id)";
+
+                comando.Parameters.AddWithValue("@id", devolucao.FkRetirada);
+
+                var resultado = comando.ExecuteNonQuery();
+
+                if (resultado == 0)
+                {
+                    throw new Exception("Não foi possivel excluir o registro de retirada");
+                }
+
+            }
+            catch (Exception ex)
+            { 
+                throw ex;
+            }
+        }
+        
     }
     
 }
