@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:sislocacao"
         mc:Ignorable="d"
         WindowState="Maximized"
-        Title="MainWindow" Height="1080" Width="1280">
+        Title="MainWindow" Height="1080" Width="1920">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="150"/>
@@ -33,7 +33,9 @@
                     </Menu>
                     <Button Background="#FF416692" FontSize="25" Height="50" BorderBrush="{x:Null}" Foreground="#DDFFFFFF" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click">Retirada de veículos
                     </Button>
-                    <Button Margin="50" Background="#FF416692" FontSize="25" Height="50" BorderBrush="{x:Null}" Foreground="#DDFFFFFF" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ButtonDevolucao_Click">Devolução de veículos
+                    <Button Margin="50" Background="#FF416692" FontSize="25" Height="50" BorderBrush="{x:Null}" Foreground="#DDFFFFFF" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ButtonDevolucao_Click" Cursor="Hand">Devolução de veículos
+                    </Button>
+                    <Button Background="#FF416692" FontSize="25" Height="50" BorderBrush="{x:Null}" Foreground="#DDFFFFFF" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ButtonListAgenda_Click" Cursor="Hand">Histórico agenda
                     </Button>
                 </StackPanel>
             </Grid>

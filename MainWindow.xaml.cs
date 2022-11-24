@@ -12,7 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MaterialDesignThemes.Wpf;
 using sislocacao.Views.Pages;
+using sislocacao.Views;
 
 namespace sislocacao
 {
@@ -56,6 +58,13 @@ namespace sislocacao
         private void ButtonDevolucao_Click(object sender, RoutedEventArgs e)
         {
             Paginas.Content = new DevolucaoVeiculo();
+        }
+
+        private void ButtonListAgenda_Click(object sender, RoutedEventArgs e)
+        {
+            var tela = new ListCaixa();
+            tela.ShowDialog();
+
         }
     }
 }
