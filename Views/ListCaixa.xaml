@@ -33,7 +33,8 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
-
+                                <Button Content="Atualizar registro" Margin="5 0" Click="Button_Atualizar_Click" />
+                                <Button Content="Excluir registro" Click="Button_Remover_Click" />
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
@@ -42,6 +43,5 @@
             </DataGrid.Columns>
 
         </DataGrid>
-
     </Grid>
 </Window>

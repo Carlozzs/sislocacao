@@ -79,5 +79,61 @@ namespace sislocacao.Models
                 throw ex;
             }
         }
+
+        public void Delete(Caixa Caixa)
+        {
+            try
+            {
+                var comando = _conn.Query();
+
+                comando.CommandText = "DELETE FROM Caixa WHERE (id_cai = @id)";
+
+                comando.Parameters.AddWithValue("@id", Caixa.Id);
+
+                var resultado = comando.ExecuteNonQuery();
+
+                if (resultado == 0)
+                {
+                    throw new Exception("Ocorreram erros ao deletar as informações");
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+        public void Update(Caixa caixa)
+        {
+            try
+            {
+                var comando = _conn.Query();
+
+                comando.CommandText = "update Caixa set " +
+                    "data_cai = @data, valorpag_cai = @valorpag, id_pag_fk = @fkPag, id_func_fk = @fkFunc, id_cli_fk = @fkCli, id_dev_fk = @fkDev where id_cai = @id;";
+
+                comando.Parameters.AddWithValue("@Id", caixa.Id);
+                comando.Parameters.AddWithValue("@data", caixa.Data);
+                comando.Parameters.AddWithValue("@valorpag", caixa.Valorpag);
+                comando.Parameters.AddWithValue("@fkPag", caixa.fkPag);
+                comando.Parameters.AddWithValue("@fkFunc", caixa.fkFunc);
+                comando.Parameters.AddWithValue("@fkCli", caixa.fkCli);
+                comando.Parameters.AddWithValue("@fkDev", caixa.fkDev);
+
+                var resultado = comando.ExecuteNonQuery();
+
+                if (resultado == 0)
+                {
+                    throw new Exception("Ocorreram erros ao salvar as informações");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
+
 }
