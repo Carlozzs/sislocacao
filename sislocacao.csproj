@@ -126,6 +126,9 @@
     <Compile Include="Views\ListCaixa.xaml.cs">
       <DependentUpon>ListCaixa.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ListCarro.xaml.cs">
+      <DependentUpon>ListCarro.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Pages\CadastrarCarro.xaml.cs">
       <DependentUpon>CadastrarCarro.xaml</DependentUpon>
     </Compile>
@@ -158,6 +161,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ListCaixa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ListCarro.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

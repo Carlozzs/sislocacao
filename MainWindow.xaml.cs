@@ -32,11 +32,21 @@ namespace sislocacao
         {
             Paginas.Content = new CadastrarCliente();
         }
-        
+        private void MenuItemListarCliente_Click(object sender, RoutedEventArgs e)
+        {
+            Paginas.Content = new CadastrarCliente();
+        }
+
 
         private void MenuItemCarro_Click(object sender, RoutedEventArgs e)
         {
             Paginas.Content = new CadastrarCarro();
+        }
+
+        private void MenuItemListarCarro_Click(object sender, RoutedEventArgs e)
+        {
+            var tela = new ListCarro();
+            tela.ShowDialog();
         }
 
         private void MenuItemFuncionario_Click(object sender, RoutedEventArgs e)

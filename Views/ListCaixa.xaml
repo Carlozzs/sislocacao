@@ -8,14 +8,14 @@
       Title="ListCaixa"
       WindowStartupLocation="CenterScreen"
       Height="450" Width="1000">
-    <Grid Background="#ff9a8fc8">
+    <Grid Background="#FF0E1A28">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Text="Listagem de Caixa" FontSize="24" Padding="10"/>
+        <TextBlock Grid.Row="0" Text="Listagem de Caixa" FontSize="24" Padding="10" Foreground="White"/>
 
         <DataGrid Grid.Row="1" x:Name="dataGridCaixa" Margin="5" AutoGenerateColumns="False" CanUserAddRows="False"
                   CanUserDeleteRows="False" IsReadOnly="True" AlternatingRowBackground="#FFE5E5E5" AlternationCount="2">

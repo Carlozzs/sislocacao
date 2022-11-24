@@ -31,6 +31,12 @@
                             <MenuItem Margin="5 5 5 5" Foreground="#DDFFFFFF" Header="Funcionário" Click="MenuItemFuncionario_Click" />
                         </MenuItem>
                     </Menu>
+                    <Menu Margin="0 0 50 0" VerticalAlignment="Center">
+                        <MenuItem Height="50" Background="#FF416692" FontSize="25" Header="Listar" Click="MenuItem_Click" Foreground="#DDFFFFFF" >
+                            <MenuItem Margin="5 5 5 5" Foreground="#DDFFFFFF" Header="Carro" Click="MenuItemListarCarro_Click"/>
+                            <MenuItem Margin="5 5 5 5" Foreground="#DDFFFFFF" Header="Cliente" Click="MenuItemListarCliente_Click"/>
+                        </MenuItem>
+                    </Menu>
                     <Button Background="#FF416692" FontSize="25" Height="50" BorderBrush="{x:Null}" Foreground="#DDFFFFFF" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click">Retirada de veículos
                     </Button>
                     <Button Margin="50" Background="#FF416692" FontSize="25" Height="50" BorderBrush="{x:Null}" Foreground="#DDFFFFFF" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ButtonDevolucao_Click" Cursor="Hand">Devolução de veículos

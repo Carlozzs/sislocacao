@@ -113,7 +113,7 @@ namespace sislocacao.Models
                 comando.CommandText = "update Caixa set " +
                     "data_cai = @data, valorpag_cai = @valorpag, id_pag_fk = @fkPag, id_func_fk = @fkFunc, id_cli_fk = @fkCli, id_dev_fk = @fkDev where id_cai = @id;";
 
-                comando.Parameters.AddWithValue("@Id", caixa.Id);
+                comando.Parameters.AddWithValue("@id", caixa.Id);
                 comando.Parameters.AddWithValue("@data", caixa.Data);
                 comando.Parameters.AddWithValue("@valorpag", caixa.Valorpag);
                 comando.Parameters.AddWithValue("@fkPag", caixa.fkPag);

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MaterialDesignThemes.Wpf;
 using MySql.Data.MySqlClient;
 using sislocacao.bancodados;
 using sislocacao.Helpers;
@@ -55,6 +56,40 @@ namespace sislocacao.Models
                 var lista = new List<Carro>();
 
                 comando.CommandText = "select * from Carro where (status_car = 'disponivel');";
+
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    var Carro = new Carro();
+                    Carro.Id = reader.GetInt32("id_car");
+                    Carro.Modelo = DAOHelper.GetString(reader, "modelo_car");
+                    Carro.Cor = DAOHelper.GetString(reader, "cor_car");
+                    Carro.Porta = DAOHelper.GetString(reader, "portas_car");
+                    Carro.Placa = DAOHelper.GetString(reader, "placa_car");
+                    Carro.Marca = DAOHelper.GetString(reader, "marca_car");
+                    Carro.Status = DAOHelper.GetString(reader, "status_car");
+
+                    lista.Add(Carro);
+                }
+                reader.Close();
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<Carro> ListAll()
+        {
+            try
+            {
+                var comando = _conn.Query();
+
+                var lista = new List<Carro>();
+
+                comando.CommandText = "select * from Carro;";
 
                 MySqlDataReader reader = comando.ExecuteReader();
 
@@ -221,5 +256,37 @@ namespace sislocacao.Models
             }
             
         }
+
+        public void Update(Carro carro)
+        {
+            try
+            {
+                var comando = _conn.Query();
+
+                comando.CommandText = "update Carro set " +
+                    "modelo_car = @modelo, cor_car = @cor, portas_car = @portas, placa_car = @placa, marca_car = @marca, status_car = @status where id_car = @id;";
+
+                comando.Parameters.AddWithValue("@id", carro.Id);
+                comando.Parameters.AddWithValue("@modelo", carro.Modelo);
+                comando.Parameters.AddWithValue("@cor", carro.Cor);
+                comando.Parameters.AddWithValue("@portas", carro.Porta);
+                comando.Parameters.AddWithValue("@placa", carro.Placa);
+                comando.Parameters.AddWithValue("@marca", carro.Marca);
+                comando.Parameters.AddWithValue("@c", carro.Status);
+
+                var resultado = comando.ExecuteNonQuery();
+
+                if (resultado == 0)
+                {
+                    throw new Exception("Ocorreram erros ao salvar as informações");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
+
 }
