@@ -19,7 +19,7 @@ namespace sislocacao.Models
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "insert into Retirada values (null, @dataHora, @funcFk, @cliFk, @carFk);";
+                comando.CommandText = "insert into Retirada values (null, @dataHora, @funcFk, @cliFk, @carFk, null);";
 
                 comando.Parameters.AddWithValue("@dataHora", retirada.dataHora2) ;
                 comando.Parameters.AddWithValue("@funcFk", retirada.id_func_fk);
@@ -49,7 +49,7 @@ namespace sislocacao.Models
 
                 var lista = new List<Retirada>();
 
-                comando.CommandText = "select * from Retirada;";
+                comando.CommandText = "select * from Retirada where (status_ret is null);";
 
                 MySqlDataReader reader = comando.ExecuteReader();
 
@@ -73,13 +73,13 @@ namespace sislocacao.Models
                 throw ex;
             }
         }
-        public void Delete(Devolucao devolucao)
+        public void FecharRetirada(Devolucao devolucao)
         {
             try
             {
                 var comando = _conn.Query();
 
-                comando.CommandText= "delete from Retirada where (id_ret = @id)";
+                comando.CommandText= "UPDATE Retirada SET status_ret = 'retirada' WHERE (id_ret = @id);";
 
                 comando.Parameters.AddWithValue("@id", devolucao.FkRetirada);
 
@@ -87,7 +87,7 @@ namespace sislocacao.Models
 
                 if (resultado == 0)
                 {
-                    throw new Exception("Não foi possivel excluir o registro de retirada");
+                    throw new Exception("Não foi possivel atualizar o registro de retirada");
                 }
 
             }

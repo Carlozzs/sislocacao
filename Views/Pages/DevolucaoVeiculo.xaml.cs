@@ -99,8 +99,8 @@ namespace sislocacao.Views.Pages
                 MessageBox.Show("Devolução Realizada!");
                 var dao1 = new CarroDAO();
                 dao1.UpdateDis(dev);
-                //var dao2 = new RetiradaDAO();
-                //dao2.Delete(dev);
+                var dao2 = new RetiradaDAO();
+                dao2.FecharRetirada(dev);
             }
             catch (Exception ex)
             {

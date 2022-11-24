@@ -79,17 +79,15 @@ insert into carro values (null, 'Cruze LTZ 1.8', 'branco', '4 portas', 'nra 2233
 
 create table Retirada(
 id_ret int  not null primary key auto_increment,
-dataHora_ret datetime,
+dataHora datetime,
 id_func_fk int ,
 foreign key (id_func_fk) references Funcionario (id_func),
 id_cli_fk int ,
 foreign key (id_cli_fk) references Cliente(id_cli),
 id_car_fk int ,
 foreign key (id_car_fk) references Carro(id_car),
+status_ret varchar(100)
 );
-
-insert into Retirada values (null, "0000-00-00 00:00:00", 1, 1, 1, 5);
-
 
 create table TipoPagamento(
 id_pag int  not null primary key auto_increment,
