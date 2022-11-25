@@ -61,6 +61,7 @@ namespace sislocacao.Views
             {
                 MessageBox.Show(ex.Message);
             }
+
         }
 
     }

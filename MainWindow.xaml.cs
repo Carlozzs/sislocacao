@@ -34,7 +34,8 @@ namespace sislocacao
         }
         private void MenuItemListarCliente_Click(object sender, RoutedEventArgs e)
         {
-            Paginas.Content = new CadastrarCliente();
+            var tela = new ListClient();
+            tela.ShowDialog();
         }
 
 

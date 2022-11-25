@@ -129,6 +129,9 @@
     <Compile Include="Views\ListCarro.xaml.cs">
       <DependentUpon>ListCarro.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ListClient.xaml.cs">
+      <DependentUpon>ListClient.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Pages\CadastrarCarro.xaml.cs">
       <DependentUpon>CadastrarCarro.xaml</DependentUpon>
     </Compile>
@@ -146,6 +149,9 @@
     </Compile>
     <Compile Include="Views\UpdateCarro.xaml.cs">
       <DependentUpon>UpdateCarro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UpdateCliente.xaml.cs">
+      <DependentUpon>UpdateCliente.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -171,6 +177,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\ListClient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Pages\CadastrarCarro.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -192,6 +202,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\UpdateCarro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UpdateCliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

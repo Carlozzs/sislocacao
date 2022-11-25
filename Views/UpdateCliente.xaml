@@ -1,0 +1,61 @@
+﻿<Window x:Class="sislocacao.Views.UpdateCliente"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:sislocacao.Views"
+        mc:Ignorable="d"
+        Title="UpdateCliente" Height="880" Width="1920">
+    <Grid Width="1920" Height="880">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <!-- Titulo -->
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="200"/>
+            <!-- butoes -->
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Cadastro de Cliente" FontSize="50" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+        <!-- deixar lindo -->
+
+        <Grid Grid.Row="2">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Button Width="300" Height="80" Margin="0 0 50 0" x:Name="btLimpar" FontSize="32" BorderBrush="#FF416692" Background="#FF416692" Cursor="Hand" Click="btLimpar_Click">Limpar</Button>
+                <Button Width="300" Height="80" x:Name="btAtualizar" FontSize="32" Click="btAtualizar_Click" Background="#FF416692" BorderBrush="#FF416692">Atualizar</Button>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Margin="100 50" VerticalAlignment="Center" HorizontalAlignment="Center" Width="1000">
+                <Label HorizontalAlignment="Center" FontSize="30">Nome</Label>
+                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtNome" HorizontalContentAlignment="Center"></TextBox>
+                <Label HorizontalAlignment="Center" FontSize="30" >CPF</Label>
+                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtCPF" HorizontalContentAlignment="Center"></TextBox>
+                <Label HorizontalAlignment="Center" FontSize="30">RG</Label>
+                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtRG" HorizontalContentAlignment="Center"></TextBox>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Grid.Column="1" Margin="100 50" VerticalAlignment="Center" HorizontalAlignment="Center" Width="1000">
+                <Label HorizontalAlignment="Center" FontSize="30">Data de Nascimento</Label>
+                <DatePicker FontSize="24" x:Name="dpData" HorizontalContentAlignment="Center" Width="750"></DatePicker>
+
+                <Label HorizontalAlignment="Center" FontSize="30" >Estado Civil</Label>
+                <ComboBox x:Name="cbEstadoCivil" HorizontalContentAlignment="Center" FontSize="24"  >
+                    <ComboBoxItem>Solteiro(a)</ComboBoxItem>
+                    <ComboBoxItem>Casado(a)</ComboBoxItem>
+                    <ComboBoxItem>Separado(a)</ComboBoxItem>
+                    <ComboBoxItem>Divorciado(a)</ComboBoxItem>
+                    <ComboBoxItem>Viúvo(a)</ComboBoxItem>
+                </ComboBox>
+                <Label HorizontalAlignment="Center" FontSize="30">Telefone</Label>
+                <TextBox FontSize="24" Margin="0 0 0 10" x:Name="txtTelefone" HorizontalContentAlignment="Center"></TextBox>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Window>
